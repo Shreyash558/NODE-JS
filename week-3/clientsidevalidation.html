@@ -1,0 +1,92 @@
+<html>
+<head>
+<title> Registration Page </title>
+</head>
+<body style="background-color : lightblue">
+<h2 align="center"> Registration Page </h2>
+ 
+<form name="myForm" action="success.html" onsubmit="return validateForm()" method="post">
+ 
+<label>Name*</label>
+<input type="text" id="nametxt"  size="20" ><br><br>
+<label>Password*</label>
+<input type="text" id="pwdtxt" size="20" ><br><br>
+<label>Email*</label>
+<input type="text" id="emailtxt" size="30"><br><br>
+<label>Phone no*</label>
+<input type="text" id="phtxt" size="20" ><br><br>
+<label>Gender</label>
+<input type="radio" name="gender" id="m" value="m">Male
+<input type="radio" name="gender" id="f" value="f">Female <br><br>
+<label> Date of Birth</label>
+<input type="date" id="bday" ><br><br>
+<label> Languages Known </label>
+<div class="checkboxgroup" >
+<input type="checkbox" name="lang"> English &nbsp; &nbsp;&nbsp;
+<input type="checkbox" name="lang"> Telugu &nbsp; &nbsp; &nbsp;
+<input type="checkbox" name="lang"> Hindi <br><br>
+</div>
+<label> Address </label><br>
+<textarea rows=5 cols=50 id="addtxtarea"  scrolling="yes"></textarea>
+</p>
+<input type="Submit" value="Register"/>
+ 
+ 
+<script>
+function validateForm()
+{
+var name = document.getElementById("nametxt").value;
+var pwd = document.getElementById("pwdtxt").value;
+var mobile = document.getElementById("phtxt").value;
+var email = document.getElementById("emailtxt").value;
+
+
+//name validation
+if (name.length < 6)
+{
+alert("The name must be min 6 chars");
+return false;
+   } 
+//password validation
+if (pwd.length < 6) 
+{
+alert("The  password must be min 6 chars");
+return false;
+   }
+
+//email validation
+var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+if(email.match(filter))  
+{  
+ 
+}  
+else
+{   
+alert("Not a valid Email ID");
+return false;
+}  
+
+//phone number validation
+var phoneno = /^\d{10}$/;  
+if(mobile.match(phoneno))  
+{  
+ 
+}  
+else
+{   
+alert("Not a valid Phone Number"); 
+return false;
+}  
+}
+</script>
+</form>
+</body>
+</html>
+ 
+ 
+Success.html
+<html>
+<body>
+<h1> Successfully Registered..</h1>
+</body>
+</html>
