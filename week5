@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE bookstab SYSTEM "lab.dtd">
+<?xml-stylesheet type="text/xsl" href="books.xsl"?>
+<books>
+    <book>
+        <title>Programming the World Wide Web</title>
+        
+        <author>Robert W.Sehesta</author>
+        <isbn>1234-5678</isbn>
+        <publisher>Tata McGraw-Hill</publisher>
+        <edition>seventh</edition>
+        <price>300</price>
+    </book>
+    <book>
+        <title>Web Technologies</title>
+    </book>
+</books>
